@@ -1,0 +1,12 @@
+{
+	"name": "AzureSql_dwh_prod",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_prod",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
