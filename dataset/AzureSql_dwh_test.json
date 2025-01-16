@@ -1,0 +1,16 @@
+{
+	"name": "AzureSql_dwh_test",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_test",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "staging",
+			"table": "SOShipping"
+		}
+	}
+}
