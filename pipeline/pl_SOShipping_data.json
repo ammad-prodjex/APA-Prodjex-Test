@@ -37,7 +37,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureSql_dwh_prod",
+						"referenceName": "AzureSql_dwh_test",
 						"type": "DatasetReference"
 					}
 				],
