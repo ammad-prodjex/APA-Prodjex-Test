@@ -1,0 +1,22 @@
+{
+	"name": "AzureBlobStorage",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_test",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "sftpzipfiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
