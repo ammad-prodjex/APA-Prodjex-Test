@@ -5,6 +5,8 @@
 			{
 				"name": "SOshipping",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -16,9 +18,17 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFolderPath": "Full/SOShipping_*",
+							"wildcardFileName": "SOShipping.csv",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
 					},
 					"sink": {
 						"type": "AzureSqlSink",
@@ -37,13 +47,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureSql_dwh_test",
+						"referenceName": "AzureBlobStorage",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSql_dwh_test",
+						"referenceName": "AzureSql_dwh_test_2",
 						"type": "DatasetReference"
 					}
 				]
