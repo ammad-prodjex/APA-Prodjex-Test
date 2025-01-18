@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "staging",
-			"table": "SOShipping_v2"
+			"table": "SOShipping"
 		}
 	}
 }
